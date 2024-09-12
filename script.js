@@ -1,4 +1,3 @@
-var _a;
 //  ------------------------------Listening Elements-------------------------------
 (_a = document
     .getElementById("resumeForm")) === null || _a === void 0 ? void 0 : _a.addEventListener("submit", function (event) {
@@ -74,7 +73,7 @@ var _a;
     }
 });
 //  ----------------------------------- Make Editable ------------------------------------
-function makeEditable2() {
+function makeEditable() {
     var editableElements = document.querySelectorAll(".editable");
     editableElements.forEach(function (element) {
         element.addEventListener("click", function () {
@@ -99,3 +98,14 @@ function makeEditable2() {
         });
     });
 }
+(_b = document.getElementById('downloadResume')) === null || _b === void 0 ? void 0 : _b.addEventListener('click', function () {
+    // Functionality to download the resume
+    alert('Resume downloading...');
+});
+(_c = document.getElementById('shareLink')) === null || _c === void 0 ? void 0 : _c.addEventListener('click', function () {
+    // Functionality to copy shareable link
+    var link = 'https://your-resume-link.com';
+    navigator.clipboard.writeText(link);
+    alert('Shareable link copied to clipboard!');
+});
+
