@@ -60,5 +60,21 @@
       <!-- ----------------Resume Will Be Generated Below------------------- -->
        <script src="script.js"></script>
     </div>
+      <script>
+      document.addEventListener('keydown', e => {
+        const inputs = Array.from(e.target.closest('form').querySelectorAll('input'));
+        const currentIndex = inputs.indexOf(e.target);
+    
+        if (e.key === 'Enter' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          const nextInput = inputs[currentIndex + 1];
+          if (nextInput) nextInput.focus();
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          const prevInput = inputs[currentIndex - 1];
+          if (prevInput) prevInput.focus();
+        }
+      });
+    </script>
 </body>
 </html>
