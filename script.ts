@@ -96,7 +96,7 @@ document
       const resumeOutputElement = document.getElementById("resumeOutput");
       if (resumeOutputElement) {
         resumeOutputElement.innerHTML = resumeOutput;
-        makeEditable();
+      makeEditable();
 
         //  ----------------------------------- Download Link-------------------------------------
         resumeOutputElement.appendChild(downloadLink);
@@ -136,3 +136,4 @@ function makeEditable() {
     });
   });
 }
+
